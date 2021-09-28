@@ -1,0 +1,144 @@
+@use "common"as *;
+
+.contact-wrap {
+  .content {
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .email-address {
+    width: 330px;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+
+    form {
+      input {
+        // border: 2px solid #3c1d22;
+        border: 2px solid $theme-color;
+        background: #000;
+        padding: 20px 20px;
+        width: 100%;
+        text-transform: capitalize;
+        font-size: 14px;
+        color: $theme-color;
+
+        &:focus {
+          border-color: $theme-color;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        bottom: 0;
+        background: $theme-color;
+        padding: 0 30px;
+        border: 0;
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      a {
+        color: #fff;
+
+        img {
+          @include mq(xs) {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-wrap-2 {
+  position: relative;
+
+  .content {
+    h2 {
+      font-size: 60px;
+      @include mq(xs) {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .icon-1 {
+    position: absolute;
+    top: -10px;
+    left: -210px;
+    @include mq(md) {
+      top: auto;
+      left: -45px;
+      width: 130px;
+      bottom: -45px;
+    }
+    @include mq(xs) {
+      top: auto;
+      left: -45px;
+      width: 130px;
+      bottom: -45px;
+    }
+  }
+
+  .icon-2 {
+    position: absolute;
+    bottom: -20px;
+    right: -30px;
+    img{
+      transform: scaleX(-1);
+    }
+    @include mq(md) {
+      right: -10px;
+      width: 90px;
+      bottom: -47px;
+    }
+    @include mq(xs) {
+      right: -10px;
+      width: 90px;
+      bottom: -47px;
+    }
+  }
+}
+
+.contact-btn {
+  display: inline-block;
+
+  a {
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 18px;
+
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
+}
+

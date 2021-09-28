@@ -1,0 +1,122 @@
+@use "common"as *;
+
+.hero-area {
+  @include mq(md) {
+    overflow: hidden;
+  }
+  @include mq(xs) {
+    overflow: hidden;
+  }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+
+  h2 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+
+    @include mq(md) {
+      font-size: 55px;
+    }
+
+    @include mq(xs) {
+      font-size: 30px;
+    }
+
+    span {
+      color: $theme-color;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    @include mq(md) {
+      font-size: 16px;
+    }
+
+    @include mq(xs) {
+      font-size: 14px;
+    }
+  }
+
+  .icon-1 {
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    @include mq(md) {
+      left: -40px;
+      width: 90px;
+    }
+    @include mq(xs) {
+      left: -40px;
+      width: 90px;
+    }
+  }
+
+  .icon-2 {
+    position: absolute;
+    right: 60px;
+    bottom: 100px;
+    img{
+      transform: scaleX(-1);
+    }
+    @include mq(xs) {
+      right: -40px;
+      width: 80px;
+    }
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    display: inline-block;
+    color: #000;
+    background: $theme-color;
+    padding: 12px 25px;
+    margin: 0 40px;
+    border-radius: 5px;
+    @include mq(xs) {
+      margin: 0 20px;
+    }
+    @include mq(xs) {
+      margin: 0 10px;
+    }
+
+    &:hover {
+      &.btn-1st {
+        background: #ff007a;
+      }
+
+      &.btn-2nd {
+        background: #d1884f;
+      }
+    }
+
+
+    svg {
+      width: 20px;
+    }
+  }
+}
+
+
+.bill-btn {
+  margin-top: 15px;
+
+  a {
+    color: $theme-color;
+    text-decoration: underline;
+    font-size: 14px;
+  }
+}

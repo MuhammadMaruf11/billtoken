@@ -1,0 +1,109 @@
+@use "common"as *;
+
+
+.road-img {
+  position: relative;
+  @include mq(xs) {
+    height: 100%;
+  }
+
+  .road {
+    @include mq(xs) {
+      height: 100%;
+    }
+
+    img {
+      @include mq(xs) {
+        height: 100%;
+      }
+    }
+  }
+
+  .car {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    @include mq(md) {
+      left: 9px;
+      top: 20%;
+    }
+    @include mq(xs) {
+      left: 9px;
+      top: 20%;
+    }
+  }
+}
+
+.road-items {
+  .items-wrap {
+    position: relative;
+    margin-top: 30px;
+    @include mq(md) {
+      padding-left: 20px;
+    }
+    @include mq(xs) {
+      padding-left: 20px;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 15px;
+      left: -110px;
+      width: 30px;
+      height: 1px;
+      background: #fff;
+      @include mq(md) {
+        display: none;
+      }
+      @include mq(xs) {
+        display: none;
+      }
+    }
+
+    img {
+      display: inline-block;
+      margin-right: 25px;
+      margin-left: -60px;
+      @include mq(md) {
+        left: 38px;
+        top: -6px;
+        position: absolute;
+      }
+      @include mq(xs) {
+        left: 38px;
+        top: -6px;
+        position: absolute;
+      }
+    }
+
+    h4 {
+      display: inline-block;
+      color: $theme-color;
+      font-size: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        a {
+          color: #fff;
+          line-height: 1.7;
+
+          i {
+            color: $theme-color;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    p {
+      margin-top: 30px;
+      font-size: 14px
+    }
+  }
+}

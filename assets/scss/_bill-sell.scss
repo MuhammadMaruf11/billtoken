@@ -1,0 +1,49 @@
+@use "common"as *;
+
+.bill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 90px;
+  text-align: center;
+  @include mq(md){
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+    grid-gap: 30px;
+  }
+  @include mq(xs){
+    grid-template-columns: 1fr;
+    padding: 0 50px;
+    grid-gap: 30px;
+  }
+}
+
+.bill-content {
+  h2 {
+    color: $theme-color;
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+}
+
+.bill-items {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  display: block;
+  padding: 50px 15px 35px;
+  min-height: 258px;
+
+  h3 {
+    color: $theme-color;
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+    display: block;
+
+    a {
+      color: $theme-color;
+      text-decoration: underline;
+    }
+  }
+}
